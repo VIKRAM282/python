@@ -1,0 +1,33 @@
+
+#cup shuffled game 
+from random import shuffle
+
+ball_loc=['','','O']
+def shuffling_cup(ball_loc):
+    shuffle(ball_loc)
+    return ball_loc
+
+result=shuffling_cup(ball_loc)
+
+def guess():
+    userguess=''
+    while userguess not in ['0', '1', '2']:
+        userguess=input('select a cup 0,1 or 2')
+    return int(userguess)
+
+
+def checking( ball_loc ,userguess):
+    if ball_loc[userguess] == 'O':
+
+        print("correct")
+    else:
+        print('wrong')
+        print(result)
+
+ball_loc=['','','o']
+#shulled
+shuflled_cup=result
+#user guess
+userguess=guess()
+#result
+checking(shuflled_cup,userguess)
